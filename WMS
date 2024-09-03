@@ -1,9 +1,0 @@
-     select PE.codfilial AS FILIAL,PE.codprod AS CODIGO,PT.DESCRICAO,PE.qtest AS WMS,PE.qtestger AS GERENCIAL, PE.qtindeniz AS AVARIA
-       , PE.qtbloqueada AS BLOQUEADO,pe.dtultent as ULTIMA_ENTRADA,pe.dtultsaida AS ULTIMA_SAIDA ,pe.dtultinvent AS ULTIMO_INVENTARIO from pcest PE
-       
-       INNER JOIN PCPRODUT PT
-       ON PE.CODPROD = PT.CODPROD
-       
-        where PE.codfilial between 1 and 2 AND PE.CODPROD = :CODPROD AND PE.CODFILIAL = :CODFILIAL 
-
-       order by PE.codfilial,PE.codprod ;
